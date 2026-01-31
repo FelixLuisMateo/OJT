@@ -1,0 +1,150 @@
+ccst-internship-system/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginController.php
+│   │   │   │   ├── RegisterController.php
+│   │   │   │   └── ForgotPasswordController.php
+│   │   │   │
+│   │   │   ├── Admin/
+│   │   │   │   ├── DashboardController.php
+│   │   │   │   ├── CourseController.php
+│   │   │   │   ├── DepartmentController.php
+│   │   │   │   ├── SchoolYearController.php
+│   │   │   │   ├── UserManagementController.php
+│   │   │   │   └── FilterController.php
+│   │   │   │
+│   │   │   ├── Coordinator/
+│   │   │   │   ├── DashboardController.php
+│   │   │   │   ├── StudentController.php
+│   │   │   │   ├── InternshipController.php
+│   │   │   │   ├── AssignmentController.php
+│   │   │   │   ├── DocumentController.php
+│   │   │   │   └── MessageController.php
+│   │   │   │
+│   │   │   ├── Supervisor/
+│   │   │   │   ├── DashboardController.php
+│   │   │   │   ├── DTRController.php
+│   │   │   │   ├── EvaluationController.php
+│   │   │   │   └── ReportController.php
+│   │   │   │
+│   │   │   ├── Student/
+│   │   │   │   ├── DashboardController.php
+│   │   │   │   ├── DTRController.php
+│   │   │   │   ├── BiometricController.php
+│   │   │   │   ├── EvaluationController.php
+│   │   │   │   └── CertificateController.php
+│   │   │   │
+│   │   │   ├── NotificationController.php
+│   │   │   └── DocumentGeneratorController.php
+│   │   │
+│   │   ├── Middleware/
+│   │   │   ├── AdminMiddleware.php
+│   │   │   ├── CoordinatorMiddleware.php
+│   │   │   ├── SupervisorMiddleware.php
+│   │   │   └── StudentMiddleware.php
+│   │
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Student.php
+│   │   ├── Coordinator.php
+│   │   ├── Supervisor.php
+│   │   ├── Course.php
+│   │   ├── Department.php
+│   │   ├── SchoolYear.php
+│   │   ├── Internship.php
+│   │   ├── DTR.php
+│   │   ├── Biometric.php
+│   │   ├── Evaluation.php
+│   │   ├── Document.php
+│   │   └── Notification.php
+│
+├── database/
+│   ├── migrations/
+│   │   ├── create_users_table.php
+│   │   ├── create_courses_table.php
+│   │   ├── create_departments_table.php
+│   │   ├── create_school_years_table.php
+│   │   ├── create_students_table.php
+│   │   ├── create_internships_table.php
+│   │   ├── create_dtrs_table.php
+│   │   ├── create_biometrics_table.php
+│   │   ├── create_evaluations_table.php
+│   │   ├── create_documents_table.php
+│   │   └── create_notifications_table.php
+│   │
+│   └── seeders/
+│       ├── UserSeeder.php
+│       ├── CourseSeeder.php
+│       └── DepartmentSeeder.php
+│
+├── resources/
+│   ├── views/
+│   │   ├── auth/
+│   │   │   ├── login.blade.php
+│   │   │   └── register.blade.php
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── dashboard.blade.php
+│   │   │   ├── courses/
+│   │   │   ├── departments/
+│   │   │   └── school-years/
+│   │   │
+│   │   ├── coordinator/
+│   │   │   ├── dashboard.blade.php
+│   │   │   ├── students/
+│   │   │   ├── internships/
+│   │   │   ├── documents/
+│   │   │   └── messages/
+│   │   │
+│   │   ├── supervisor/
+│   │   │   ├── dashboard.blade.php
+│   │   │   ├── dtr/
+│   │   │   ├── evaluations/
+│   │   │   └── reports/
+│   │   │
+│   │   ├── student/
+│   │   │   ├── dashboard.blade.php
+│   │   │   ├── dtr/
+│   │   │   ├── biometric/
+│   │   │   ├── evaluation/
+│   │   │   └── certificate/
+│   │   │
+│   │   └── layouts/
+│   │       ├── app.blade.php
+│   │       └── sidebar.blade.php
+│
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   ├── biometric.js
+│   │   ├── dtr.js
+│   │   ├── notifications.js
+│   │   └── realtime-hours.js
+│   └── assets/
+│       └── images/
+│
+├── routes/
+│   ├── web.php
+│   └── api.php
+│
+├── storage/
+│   ├── app/
+│   │   ├── documents/
+│   │   │   ├── templates/
+│   │   │   │   ├── application_letter.docx
+│   │   │   │   ├── endorsement_letter.docx
+│   │   │   │   ├── waiver.docx
+│   │   │   │   ├── resume.docx
+│   │   │   │   ├── moa.docx
+│   │   │   │   └── dtr.docx
+│   │   │   └── generated/
+│   │   └── dtr_uploads/
+│
+├── .env
+├── composer.json
+├── README.md
+└── .gitignore
